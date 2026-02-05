@@ -10,10 +10,10 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  width: 65%;
-  min-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 100%;
+  padding: 16px;
+  margin: 0;
+  flex-wrap: wrap;
   font-family: "helvetica", sans-serif;
 }
 
@@ -21,14 +21,18 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  font-family: "helvetica", bold;
+  font-family: "helvetica", sans-serif;
 }
 
 .header-left h1 {
   margin: 0;
-  font-size: 40px;
+  font-size: 28px;
   white-space: nowrap;
-  font-family: "helvetica", bold;
+  font-family: "helvetica", sans-serif;
+}
+
+@media (min-width: 700px) {
+  .header-left h1 { font-size: 40px; }
 }
 
 .header-center {
@@ -81,8 +85,8 @@
 }
 
 .contenu {
-    width: 60%;
-    min-width: 600px;
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     line-height: 1.6;
@@ -193,7 +197,8 @@ a:visited {
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
-    transition: transform 0.3s;
+  transition: transform 0.3s;
+  flex-direction: column; /* mobile-first */
 }
 
 .main-photo-container > div:first-child {
@@ -216,16 +221,17 @@ a:visited {
 }
 
 .main-photo {
-  width: 280px;
-  height: 100%;
-  min-height: 400px;
+  width: 100%;
+  height: auto;
+  min-height: 240px;
   object-fit: cover;
   border-radius: 0;
 }
 
 /* Reversed layout: photo left, text right */
 .main-photo-container-reversed {
-  flex-direction: row-reverse;
+  display: flex;
+  flex-direction: column; /* mobile-first */
 }
 
 .main-photo-container-reversed > div:first-child {
@@ -303,8 +309,8 @@ a:visited {
   transition: transform 0.35s ease;
 }
 .carousel-slide {
-  flex: 0 0 calc((100% - 16px) / 3);
-  height: 320px;
+  flex: 0 0 100%;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -338,3 +344,23 @@ a:visited {
 .carousel-btn.prev { margin-right: 8px; }
 .carousel-btn.next { margin-left: 8px; }
 
+/* Responsive tweaks for the main layout and carousel */
+@media (min-width: 600px) {
+  .carousel-slide {
+    flex: 0 0 calc((100% - 16px) / 2);
+    height: 260px;
+  }
+}
+@media (min-width: 900px) {
+  .header { padding: 20px; }
+  .header-left h1 { font-size: 40px; }
+  .main-photo-container { flex-direction: row; }
+  .main-photo { width: 40%; }
+  .main-photo-container > div:first-child { padding: 20px; }
+  .main-photo-container-reversed { flex-direction: row-reverse; }
+  .main-photo-container-reversed > div:first-child { padding: 20px; }
+  .carousel-slide {
+    flex: 0 0 calc((100% - 16px) / 3);
+    height: 320px;
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clément Ferrier</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="Photos/avatar_vert.png" type="image/jpeg">
+    </head>
+
+    <body>
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html" class="home-link">
+                <img src="Photos/avatar_vert.png" alt="Ma photo" class="avatar">
+            </a>
+            <h1>portfolio.</h1>
+        </div>
+        <div class="header-center"></div>
+        <div class="header-right">
+            <nav class="nav-links">
+                <a href="index.html">Accueil</a>
+                <span class="nav-sep" aria-hidden="true"></span>
+                <a class="contact-btn" id="contactBtn">Contactez-moi</a>
+                <span id="email" style="display:none;">clement.ferrier@hotmail.fr</span>
+            </nav>
+        </div>
+    </div>
+        <!-- Carousel: trois images visibles -->
+        <div class="carousel" aria-label="Carrousel de photos">
+            <button class="carousel-btn prev" aria-label="Précédent">&#10094;</button>
+            <div class="carousel-viewport">
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img src="photos-caroussel/sbg_sac-dos.png" alt="photo 1"></div>
+                    <div class="carousel-slide"><img src="photos-caroussel/sbg_socle-magsafe.png" alt="photo 2"></div>
+                    <div class="carousel-slide"><img src="photos-caroussel/sbg_table-basse.png" alt="photo 3"></div>
+                    <div class="carousel-slide"><img src="photos-caroussel/sbg_tabouret-faux.png" alt="photo 4"></div>
+                    <div class="carousel-slide"><img src="photos-caroussel/sbg_tabouret-vrai.png" alt="photo 5"></div>
+                    <div class="carousel-slide"><img src="photos-caroussel/ascii-art.png" alt="photo 6"></div>
+                </div>
+            </div>
+            <button class="carousel-btn next" aria-label="Suivant">&#10095;</button>
+        </div>
+
+        <div class="contenu">
+                <p>Hey ! I'm <b>Clément</b> and I love making <b>cool stuff</b>.</p>
+                <br>
+                <section class="about">
+                    <h1>About me.</h1>
+                    <p>J'ai <strong><span id="age-annees"></span> ans</strong> et <strong><span id="age-jours"></span> jours</strong>, j'adore fabriquer toutes sortes d'objets, j'ai plein d'idées… mais pas beaucoup de temps.</p>
+                    <p>J’ai comme but dans la vie de fabriquer tous les objets dont j'ai un jour besoin, même mes chaussettes.</p>
+                    <p>Depuis le début de mon existance, j'ai toujours aimé fabriquer des objets, mais c'est depuis le confinement du COVID-19 que j'ai réellement commencé à m'exprimer. Maintenant dès que j'ai une idée, j'essaye de la fabriquer. J'adore ça et en plus, ça me permet de développer ma créativité.</p>
+                    <p>J'ai passé beaucoup trop de temps à regarder des vidéos YouTube, mais au moins j'ai appris des techniques et j'ai pris pas mal d'inspiration.</p>
+                    <p>Du coup au final j'ai l'impression d'avoir appris pas mal de choses en essayant de fabriquer tout ce qui me passe par la tête. Voici une liste non exhaustive de ce que je sait faire (ou presque faire): </p>
+                    <div class="skills">
+                        <span class="skill-badge">Menuiserie</span>
+                        <span class="skill-badge">Couture</span>
+                        <span class="skill-badge">Photographie</span>
+                        <span class="skill-badge">Dessin</span>
+                        <span class="skill-badge">Modélisation 3D</span>
+                        <span class="skill-badge">Électronique</span>
+                        <span class="skill-badge">Développement de site internet</span>
+                        <span class="skill-badge">Design graphique</span>
+                        <span class="skill-badge">Ratouche photo</span>
+                    </div>
+                    <br><br>
+                    <p>Si je fais ce portfolio, c'est surtout pour rassembler tous les projets que j'ai faits en un seul endroit, pour me souvenir des choses, des belles choses que j'ai faites, mais aussi des certaines qui sont moins bien (bon… Je vais peut-être pas vous montrer tous les ratés quand même).</p>
+                    <p>C'est également un défi pour moi de créer un site internet. J'essaie de le faire entièrement tout seul. Mais c'est pas très facile de le rendre beau. C'est pourquoi j'ai opté pour un design plutôt simple en essayant de l'améliorer petit à petit.</p>
+                </section>
+
+                <small>PS : désolé pour les fautes d'orthographe 😊</small>
+                <br><br>
+                <h1>Quelques un de mes projets.</h1>
+
+                <div class="main-photo-container">
+            <div>
+                <h1>Plus qu'un tabouret, une nouvelle vision.</h1>
+                <p>Voila certainement la plus belle piece de ma main. Pour ce projet l'inspiration me viens principalement d'un youtubeur du nom de <em><a href="https://www.youtube.com/@MakeWithMiles">MakeWithMiles</a></em>.</p>
+                <p>Je suis d'abord parti de morceaux de bois carré. Je les ai assemblés pour faire la forme globale. Et ensuite je les ai arrondis à l'aide d'une défonseuse d'abord, puis d'une ponceuse principalement.</p>
+                <a href="projet-stool.html" class="project-button">Voir le projet <img src="icone/arrow_forward.svg" alt=""></a>
+            </div>
+            <img src="photos-caroussel/sbg_tabouret-vrai.png" alt="Photo du tabouret" class="main-photo">
+                </div>
+        
+                 <div class="main-photo-container main-photo-container-reversed">
+            <div>
+                <h1>Un sac à dos... original.</h1>
+                <p>Style de sac à dos alpinisme/ultralight</p>
+                <ul>
+                    <li>Tissus utilisés : toile de sac cabas IKEA, t-shirt de sport noir (mesh), sac de couette transparent (poches latérales), lycra (poche de devant et poche élastique)</li>
+                    <li>Compartiment principal avec fermeture roll-top et fermeture verticale</li>
+                    <li>Petite poche intérieure fermée pour les petits objets importants (avec crochet pour les clés)</li>
+                    <li>Trois grandes poches extérieures : deux latérales pour les gourdes et une centrale élastique pour les vestes et autres affaires</li>
+                    <li>Poche à la ceinture (hipbelt pocket)</li>
+                </ul>
+                <a href="projet-sac-dos.html" class="project-button">Voir le projet <img src="icone/arrow_forward.svg" alt=""></a>
+            </div>
+            <img src="photos-caroussel/sbg_sac-dos.png" alt="Photo du sac à dos" class="main-photo">
+                </div>
+            
+       
+       <ul>
+        <li><a href="projet-stool.html">tabouret</a></li>
+        <li><a href="projet-sac-dos.html">sac à dos</a></li>
+        <li><a href="projet-mezzanine.html">mezzanine</a></li>
+        <li><a href="stood.html">une ebauche de marque</a></li>
+        </ul>
+            </div>
+        
+      
+
+
+    <script src="carousel.js"></script>
+    <script src="age.js"></script>
+    <script src="contact.js"></script>
+        
+    </body>
+</html>

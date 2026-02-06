@@ -180,6 +180,25 @@
 .gallery img:hover {
   transform: scale(1.05);
 }
+
+/* Hidden state management for progressive galleries */
+.hidden { display: none; }
+
+/* Button styling to reveal all photos across projects */
+.see-all {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #d0d0d0;
+  color: #111;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+.see-all:hover { background: #b8b8b8; }
 a {
     text-decoration: none;
 }
@@ -364,3 +383,17 @@ a:visited {
     height: 320px;
   }
 }
+
+/* Enhanced carousel visuals on home page */
+.carousel-slide { position: relative; }
+.carousel-slide img { width: 100%; height: auto; display: block; }
+.carousel-slide[data-caption]::after {
+  content: attr(data-caption);
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 8px 12px;
+  background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,0));
+  color: #fff; font-size: 0.9rem;
+}
+.carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 8px; }
+.carousel-dots .dot { width: 8px; height: 8px; border-radius: 50%; border: none; background: #ccc; cursor: pointer; padding: 0; }
+.carousel-dots .dot.active { background: #333; width: 12px; height: 12px; }

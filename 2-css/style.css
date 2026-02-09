@@ -10,9 +10,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  width: 100%;
+  width: 80%;
   padding: 16px;
-  margin: 0;
+  margin: 0 auto;
   flex-wrap: wrap;
   font-family: "helvetica", sans-serif;
 }
@@ -391,7 +391,6 @@ a:visited {
   content: attr(data-caption);
   position: absolute; bottom: 0; left: 0; right: 0;
   padding: 8px 12px;
-  background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,0));
   color: #fff; font-size: 0.9rem;
 }
 .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 8px; }

@@ -11,6 +11,8 @@ function getVisibleImages() {
 }
 
 function bindLightboxToVisible() {
+  if (!lightbox || !lightboxImg || !prevBtn || !nextBtn) return;
+
   const vis = getVisibleImages();
   vis.forEach((img, index) => {
     img.onclick = () => {
@@ -34,18 +36,19 @@ function bindLightboxToVisible() {
   };
 }
 
-bindLightboxToVisible();
+if (lightbox && lightboxImg && closeBtn && prevBtn && nextBtn) {
+  bindLightboxToVisible();
 
-// Fermer lightbox
-const closeBtn2 = document.querySelector('#lightbox .close');
-closeBtn2.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
+  // Fermer lightbox
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
 
-// Fermer en cliquant sur le fond
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) lightbox.style.display = 'none';
-});
+  // Fermer en cliquant sur le fond
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) lightbox.style.display = 'none';
+  });
+}
 
 // Progressive photo galleries: toggle extra photos with a button
 // Progressive photo galleries: robust toggle for Stool and Backpack
